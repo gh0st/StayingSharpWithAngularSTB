@@ -4,7 +4,7 @@ angular.module('NoteWrangler').config(function($routeProvider) {
         redirectTo: '/notes'
     })
     .when('/notes', {
-        templateUrl: 'assets/templates/index.html',
+        templateUrl: 'assets/templates/notes/index.html',
         controller: 'NotesIndexController'
     })
     .when('/notes/new', {
