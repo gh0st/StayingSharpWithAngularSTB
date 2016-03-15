@@ -9,7 +9,7 @@ var categories = [
   {"id": 6, "name": "Question"},
   {"id": 7, "name": "Best Practice"},
   {"id": 8, "name": "Code Snippet"}
-]
+];
 
 module.exports = {
   get: function(id) {
@@ -20,4 +20,4 @@ module.exports = {
   all: function() {
     return categories;
   }
-}
+};

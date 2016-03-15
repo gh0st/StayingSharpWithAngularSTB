@@ -1,6 +1,6 @@
 var _ = require('lodash');
-var Category = require('./category')
-var User = require('./user')
+var Category = require('./category');
+var User = require('./user');
 var notes = [
   {"id":1 ,"userId": 13, "categoryId": 8, "description": "NgModel Best Practice", "content" : "Always use dot syntax when using NgModel! Treat Scope as read-only in templates & write-only in controllers. The purpose of the scope is to refer to the model, not be the model. The model is your javascript objects. When doing bidirectional binding with ngModel make sure you don't bind directly to the scope properties. This will cause unexpected behavior in the child scopes.", "title" : "NgModel BP"},
   {"id":2 ,"userId": 2, "categoryId": 3, "description" : "Markers on a **DOM element** that tell AngularJS's HTML compiler `$compile` to attach a specified behavior to that DOM element.", "title" : "Directives", "content": "Markers on a **DOM element**"},
@@ -8,7 +8,7 @@ var notes = [
   {"id":4 ,"userId": 2, "categoryId": 6, "description" : "QUESTIONABLE DESCRIPTION GOES HERE", "title" : "TEST TEST TEST", "content": "QUESTIONABLE CONTENT GOES HERE"},
   {"id":5 ,"userId": 4, "categoryId": 6, "description" : "Define Service", "title" : "What is a Service", "content": "Service: Angular services are objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app."},
   {"id":6 ,"userId": 5, "categoryId": 6, "description" : "Steps for Creating a Service", "title" : "How do you create a Service?", "content": "You can register a service to our Angular module `app` with a one of the following 5 recipes: \\n 	- **factory**  \\n 	- **provider**  \\n 	- **service**  \\n 	- **value**  \\n 	- **constant** "}
-]
+];
 var lastId = 6;
 
 var buildNotes = function() {
@@ -23,8 +23,8 @@ var buildNotes = function() {
     note.category = Category.get(note.categoryId);
     builtNotes.push(note);
   }
-  return builtNotes
-}
+  return builtNotes;
+};
 
 module.exports = {
   get: function(id) {
@@ -60,7 +60,7 @@ module.exports = {
   create: function(note) {
     lastId += 1;
     note.id = lastId;
-    notes.push(note)
+    notes.push(note);
     return note;
   }
-}
+};

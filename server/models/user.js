@@ -23,4 +23,4 @@ module.exports = {
   all: function() {
     return users;
   }
-}
+};
